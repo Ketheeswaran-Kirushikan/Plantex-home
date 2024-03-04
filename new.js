@@ -1,12 +1,17 @@
 let isNightMode = false;
-function toggleNightMode() {
-    const sunIcon = document.getElementById('sunIcon');
-    const moonIcon = document.getElementById('moonIcon');
-    isNightMode = !isNightMode;
-    moonIcon.classList.toggle('hidden', isNightMode);
-    sunIcon.classList.toggle('hidden', !isNightMode);
-    document.body.classList.toggle('night-mode', isNightMode);
-}
+
+        function toggleNightMode() {
+            const sunIcon = document.getElementById('sunIcon');
+            const moonIcon = document.getElementById('moonIcon');
+            isNightMode = !isNightMode;
+
+            document.body.classList.toggle('night-mode', isNightMode);
+
+            setTimeout(() => {
+                moonIcon.classList.toggle('hidden', isNightMode);
+                sunIcon.classList.toggle('hidden', !isNightMode);
+            }, 100);
+        }
 
 const images = document.querySelectorAll('#slider img');
 let index = 0;
@@ -101,5 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
         circleThree.classList.remove("activated");
         clickedCircle.classList.add("activated");
     }
+    
 });
+
 

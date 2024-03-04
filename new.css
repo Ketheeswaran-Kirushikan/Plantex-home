@@ -7,11 +7,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
-    background-color: #ecfeff;
+body {
     height: fit-content;
 }
-
 .nightModeContainer { 
     display: flex;
     align-items: center;
@@ -44,6 +42,7 @@ body{
 .mask-custom {
     backdrop-filter: blur(5px);
     background-color: rgb(134, 239, 172, .15);
+    transition: background-color 1s ease; 
   }
   
 
@@ -53,6 +52,7 @@ body{
 }
 .background-custom {
     background-color: #f0fdf4;
+    transition: background-color 1s ease; 
 }
 .Text{
     color: #000000;
@@ -97,6 +97,7 @@ body{
 }
 .night-mode .background-custom{
     background-color: rgb(20,25,25);
+    transition: background-color 1s ease; 
 }
 .night-mode .Text{
     color: #ffffff;
@@ -167,12 +168,12 @@ body{
 #slider img {
     position: absolute;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease, transform 0.5s;
     height: 500px;
     width: auto;
     filter: drop-shadow(0 0 20px rgba(68, 113, 8, 0.428));
-    transition: transform 0.3s;
 }
+
 #slider img:hover {
     transform: scale(1.05);
 }
@@ -298,13 +299,14 @@ body{
         .faq.active .faq-toggle .fa-plus{
             display: none;
         }
-       
-
+    
     #team h5{
         color: #22c55e;
     }
     
-    
+    .teamTrans{
+        transition: all 1s ease;
+    }
     
     .imgpos{
         margin-top: 100px;
@@ -370,6 +372,7 @@ body{
         color: #054314 !important;
         filter: drop-shadow(0 0 5px #00ff40); 
         animation: glowing 5000ms infinite;
+        transition: all 1s ease;
     }
     @keyframes glowing {
         0% { box-shadow: 0 0 -10px #c4a300; }
@@ -377,4 +380,9 @@ body{
         60% { box-shadow: 0 0 20px #c4a300; }
         100% { box-shadow: 0 0 -10px #c4a300; }
       }
+      
+
+
+
+
       
