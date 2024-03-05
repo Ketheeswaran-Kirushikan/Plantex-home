@@ -381,8 +381,120 @@ body {
         100% { box-shadow: 0 0 -10px #c4a300; }
       }
       
+      @media (max-width: 767px) {
+        #contact .row{
+            flex-wrap: wrap;
+        }
+        #contact .col {
+            flex-basis: 100%;
+        }
+    }
+    .input-group {
+        margin-bottom: 10px;
+    }
+    label {
+        display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        box-sizing: border-box;
+        border: 1px solid #41d16a;
+        border-radius: 4px;
+    }
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        width: 150px;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .contact {
+        background-color: white;
+        color: #128e10;
+        margin-top: 20px;
+        border: 1px solid #03e15c;
+        border-radius: 10px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); 
+        width: 600px;
+    }
+    
 
 
+    .contact-background {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .contact-background::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./resources/121212.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: blur(3px);
+        z-index: -1;
+    }
+    
+    .contact-background::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset 0 0 300px rgba(1, 37, 1, 500);
+        z-index: -2;
+    }
+    
+    #contact .contact-text{
+        padding-top: 40px;
+        color: #ffffff;
+        font-size: 50px;
+        font-weight: 500;
+    }
 
+    
+    .icon-container .icon{
+        background-color: white;
+        margin-top: 50px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        border-radius: 50px;
+    }
 
-      
+    .icon-container .icon i{
+        padding: 20px;
+    }
+    .icon-text{
+        font-size: 20px;
+        color: white;
+    }
+    .icontText-container {
+        display: flex;
+        align-items: center;
+    }
+    .icontText-container label{
+        padding-left: 30px;
+        margin-top: 50px;
+        font-size: 20px;
+        color: white;
+
+    }
+    
+
+    
