@@ -110,3 +110,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+function subscribe() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('error-message').style.display = 'none';
+    setTimeout(() => {
+        document.getElementById('error-message').style.display = 'block';
+        document.querySelector('.loader').style.display = 'none';
+    }, 2000);
+}
+
+function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+    document.querySelector('.loader').style.display = 'block';
+}
+
